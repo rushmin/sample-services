@@ -98,7 +98,7 @@ function deleteProduct(int id) returns int|error{
     sql:ExecutionResult result = check dbClient->execute(`DELETE FROM product WHERE id=${id}`);
     return <int>result.affectedRowCount;
 }
-
+// Test comment to trigger build
 service / on new graphql:Listener(9090) {
 
     # A resource for generating greetings
